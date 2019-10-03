@@ -16,7 +16,7 @@ function showTime(){
   sec = today.getSeconds();
 
   // Am or PM
-  // determines if am or pm based on the 0-23 value of the hours of today.getHours
+  // ternary operator determines if am or pm based on the 0-23 value of the hours of today.getHours
 
   const amPm = hour >= 12 ? 'PM' : 'AM';
 
@@ -36,6 +36,7 @@ function showTime(){
 
 // add zero to time
 function addZero(n){
+
   return(parseInt(n, 10) < 10 ? '0' : '') + n
 }
 
@@ -94,8 +95,6 @@ function quotePrint()
 random = Math.random();
 const quote = random >= 0.5 ? `${quo1}` : `${quo2}`;
 
-
-console.log(random, quote);
 document.getElementById("quoteToday").innerHTML = quote
 }
 
